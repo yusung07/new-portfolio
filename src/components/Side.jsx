@@ -7,7 +7,7 @@ export default function SideBar() {
             <h2 className="text-xl font-bold mb-4">메뉴</h2>
             <ul>
                 <li className="mb-2"><Link to="/">홈</Link></li>
-                <li className="mb-2"><Link to="/asd">Asd 페이지</Link></li>
+                <li className="mb-2"><Link to="/skill">기술 스택</Link></li>
             </ul>
         </div>
     );
