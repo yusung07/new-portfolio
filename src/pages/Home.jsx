@@ -7,7 +7,7 @@ export default function Home() {
                 <div className="flex items-center space-x-6">
                     <img src="https://Dayoon07.github.io/img/증명사진.jpg" alt="증명사진" className="w-32 h-32 rounded-full object-cover" />
                     <div>
-                        <h3 className="text-2xl font-semibold text-gray-900">강다윤 (Dayoon Kang)</h3>
+                        <h3 className="text-2xl font-semibold text-gray-900">강다윤 <br className="lg:hidden" /> (Dayoon Kang)</h3>
                         <div className="flex space-x-6 mt-2">
                             <a href="https://github.com/Dayoon07" target="_blank" className="text-blue-500 hover:text-blue-700 flex items-center">
                                 <svg className="w-5 h-5 mr-1" fill="currentColor" viewBox="0 0 24 24">
