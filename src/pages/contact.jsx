@@ -1,7 +1,10 @@
 export default function Contact() {
     return (
-        <div>
-            연락처랑 이메일, 여러 정보들
-        </div>
+        <>
+            <p className="text-lg">
+                연락처: 010-8466-8317 <br />
+                이메일: gangd0642@gmail.com
+            </p>
+        </>
     );
 }

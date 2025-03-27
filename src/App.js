@@ -7,27 +7,29 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import Skill from './pages/Skill';
 import Projects from './pages/Projects';
-import { VideoProject, BlogProject, KmcreativeschoolProject } from './pages/Projects';
+import { MobileSideBar } from './components/Side';
 import Architecture from './pages/Architecture';
 import Contact from './pages/Contact';
 
 export default function App() {
   return (
     <BrowserRouter basename='/react-popol'>
-      <div className="flex">
+      <div className="flex min-h-screen">
         <SideBar />
-        <div className="fixed top-0 lg:left-80 lg:flex">
+        <MobileSideBar />
+
+        <div className="flex flex-col flex-grow h-screen overflow-hidden">
           <Header />
-          <Routes>
-            <Route path="/" element={ <Home /> } />
-            <Route path="/skill" element={ <Skill /> } />
-            <Route path="/projects" element={ <Projects /> } />
-            <Route path='/project/video' element={ <VideoProject /> } />
-            <Route path='/project/blog' element={ <BlogProject /> } />
-            <Route path='/project/kmcreativeschool' element={ <KmcreativeschoolProject /> } />
-            <Route path='/architecture' element={ <Architecture /> } />
-            <Route path='/contact' element={ <Contact /> } />
-          </Routes>
+
+          <main className="flex-grow overflow-y-auto lg:p-8 max-lg:p-4">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/skill" element={<Skill />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/architecture" element={<Architecture />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
         </div>
       </div>
     </BrowserRouter>
