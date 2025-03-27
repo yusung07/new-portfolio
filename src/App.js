@@ -13,7 +13,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <BrowserRouter basename='/react-popol'>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="flex min-h-screen">
         <SideBar />
         <MobileSideBar />
