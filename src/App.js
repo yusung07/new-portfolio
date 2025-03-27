@@ -13,7 +13,7 @@ import Contact from './pages/Contact';
 
 export default function App() {
   return (
-    <BrowserRouter basename='https://dayoon07.me'>
+    <BrowserRouter basename='/react-popol'>
       <div className="flex min-h-screen">
         <SideBar />
         <MobileSideBar />
