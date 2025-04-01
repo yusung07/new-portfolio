@@ -62,7 +62,7 @@ export default function Projects() {
                                     </span>
                                 ))}
                             </div>
-                            <p className="text-md mt-2 max-lg:w-full">{project.description}</p>
+                            <p className="text-md mt-2 max-lg:w-full max-lg:pr-8">{project.description}</p>
                             {project.demoVideo && (
                                 <button 
                                     type="button" 

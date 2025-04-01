@@ -22,7 +22,7 @@ export default function Architecture() {
 
             <div className="lg:flex lg:gap-4">
                 {l.map((content, idx) => (
-                    <div className="max-w-sm overflow-hidden">
+                    <div className="lg:max-w-sm max-lg:w-full">
                         <a href={content.img} target="_blank">
                             <img src={content.img} className="w-full" />
                         </a>
