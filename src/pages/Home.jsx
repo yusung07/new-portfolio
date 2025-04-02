@@ -1,8 +1,27 @@
 import React from "react";
 
 export default function Home() {
+
+    const recentInterest = [
+        {
+            title: "데이터베이스 최적화",
+            content: `
+                데이터베이스 성능 튜닝과 쿼리 최적화 방법에 관심을 갖고 공부하고 있습니다. 
+                특히 대용량 데이터 처리 시 효율적인 인덱싱 전략에 집중하고 있습니다.
+            `
+        },
+        {
+            title: "Tensorflow 기반 딥러닝",
+            content: `
+                Tensorflow & Keras를 활용해 신경망 설계 및 구현과 딥러닝 모델 학습 방법에 대해 공부하고 있습니다.
+            `
+        }
+    ];
+
     return (
         <>
+            <h1 className="text-3xl font-bold mb-6">소개</h1>
+
             <>
                 <div className="flex items-center space-x-6">
                     <img src="https://Dayoon07.github.io/img/증명사진.jpg" alt="증명사진" className="w-32 h-32 rounded-full object-cover" />
@@ -39,6 +58,21 @@ export default function Home() {
                     이를 통해 실력을 더욱 키울 수 있었습니다. 앞으로도 모르는 것을 배우며 끊임없이 <br className="max-lg:hidden" />
                     성장하는 개발자가 되겠습니다.
                 </p>
+            </div>
+
+            <div className="mt-6 max-w-3xl">
+                <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">요즘 관심사</h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    {recentInterest.map((c, i) => (
+                        <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                            <div className="flex items-center mb-2">
+                                <h3 className="text-lg font-semibold text-gray-800">{c.title}</h3>
+                            </div>
+                            <p className="text-gray-600">{c.content}</p>
+                        </div> 
+                    ))}
+                </div>
             </div>
         </>
     );

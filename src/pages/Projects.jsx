@@ -3,7 +3,7 @@ export default function Projects() {
         {
             title: "mycloud-project",
             link: "https://github.com/Dayoon07/mycloud-project",
-            image: "https://dayoon07.github.io/img/mycloud.png",
+            image: "https://dayoon07.github.io/static-page-test/img/mycloud.png",
             technologies: ['Spring Boot', 'Spring Security', 'File I/O', 'Rest API'],
             description: '클라우드를 일부분 구현한 프로젝트입니다. 메일 기능, 엑세스 키 기능을 활용해 다른 사람에게 나의 파일을 공유할 수 있습니다.',
             demoVideo: 'https://dayoon07.github.io/video/mycloud-test.mp4'
@@ -17,7 +17,7 @@ export default function Projects() {
             demoVideo: 'https://dayoon07.github.io/video/video-platform.mp4'
         },
         {
-            title: 'SpringBoot Blog',
+            title: 'springboot-blog',
             link: 'https://github.com/Dayoon07/springboot-blog',
             image: 'https://Dayoon07.github.io/img/springbootblog.png',
             technologies: ['Spring Boot', 'JPA', 'JSP', 'Oracle'],
@@ -41,12 +41,10 @@ export default function Projects() {
                 {projectsData.map((project, index) => (
                     <div key={index} className="w-full lg:flex mt-2">
                         <div>
-                            <img 
-                                src={project.image} 
-                                alt={project.title} 
-                                className="lg:w-96 object-cover rounded-md" 
-                                title={project.title} 
-                            />
+                            <a href={project.image} target="_blank">
+                                <img src={project.image} alt={project.title} title={project.title} 
+                                    className="lg:w-96 object-cover rounded-md" />
+                            </a>
                         </div>
                         <div className="w-full lg:max-w-md ml-4">
                             <h1 className="text-2xl font-semibold hover:text-blue-500 hover:underline max-lg:my-2 lg:mb-2">

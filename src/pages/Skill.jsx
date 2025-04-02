@@ -5,7 +5,7 @@ export default function Skill() {
         <>
             <h1 className="text-3xl font-bold mb-6">기술 스택</h1>
 
-            <div className="w-full grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="max-w-screen-xl grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {[
                     {
                         title: "Tools",
@@ -25,7 +25,7 @@ export default function Skill() {
                     },
                     {
                         title: "Languages",
-                        color: "bg-emerald-600",
+                        color: "bg-green-600",
                         items: [
                             "HTML",
                             "CSS",
@@ -44,7 +44,7 @@ export default function Skill() {
                         ]
                     },
                     {
-                        title: "Frameworks",
+                        title: "Web Frameworks",
                         color: "bg-red-600",
                         items: [
                             "Spring",
@@ -64,41 +64,69 @@ export default function Skill() {
                         ]
                     },
                     {
-                        title: "Databases",
-                        color: "bg-purple-600",
+                        title: "DB & DB Tools",
+                        color: "bg-yellow-600",
                         items: [
                             "Oracle",
-                            "Maria"
+                            "Maria",
+                            "Sql Developer",
+                            "Dbeaver"
                         ],
                         links: [
                             "https://dayoon07.github.io/static-page-test/devimg/OracleDB.png",
-                            "https://dayoon07.github.io/static-page-test/devimg/MariaDB.png"
+                            "https://dayoon07.github.io/static-page-test/devimg/MariaDB.png",
+                            "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png",
+                            "https://dayoon07.github.io/static-page-test/devimg/DBeaver.png"
                         ]
                     },
                     {
                         title: "Libraries",
                         color: "bg-orange-600",
                         items: [
+                            "React",
                             "jQuery",
                             "Lombok",
                             "JSTL"
                         ],
                         links: [
+                            "https://dayoon07.github.io/static-page-test/devimg/React.png",
                             "https://dayoon07.github.io/static-page-test/devimg/jQuery.png",
                             "https://dayoon07.github.io/static-page-test/devimg/lombok.png",
                             "https://dayoon07.github.io/static-page-test/devimg/jstl.png"
                         ]
                     },
                     {
-                        title: "Database Tools",
-                        color: "bg-yellow-600",
+                        title: "Server",
+                        color: "bg-black",
                         items: [
-                            "Sql Developer",
-                            "Dbeaver"
+                            "Apache Tomcat", "Nginx"
                         ],
                         links: [
-                            "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png",
-                            "https://dayoon07.github.io/static-page-test/devimg/DBeaver.png"
+                            "https://dayoon07.github.io/static-page-test/devimg/ApacheTomcat.png",
+                            "https://dayoon07.github.io/static-page-test/devimg/nginx.png"
+                        ]
+                    },
+                    {
+                        title: "Monitoring",
+                        color: "bg-cyan-500",
+                        items: [
+                            "Prometheus", "Grafana"
+                        ],
+                        links: [
+                            "https://dayoon07.github.io/static-page-test/devimg/prometheus.png",
+                            "https://dayoon07.github.io/static-page-test/devimg/grafana.png"
+                        ]
+                    },
+                    {
+                        title: "Ai Frameworks",
+                        color: "bg-purple-600",
+                        items: [
+                            "Tensorflow",
+                            "keras"
+                        ],
+                        links: [
+                            "https://dayoon07.github.io/static-page-test/devimg/tensorflow.png",
+                            "https://dayoon07.github.io/static-page-test/devimg/keras.png"
                         ]
                     }
                 ].map((section, index) => (

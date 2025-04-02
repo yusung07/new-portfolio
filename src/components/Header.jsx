@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 export default function Header() {
     return (
         <header className="w-full bg-white border-b text-black z-10 lg:hidden">
