@@ -14,23 +14,26 @@ export default function Architecture() {
             img: "https://dayoon07.github.io/static-page-test/img/springbootblogerd.png",
             title: "spring boot blog ERD",
             text: "이거는 병행하면서 1개월 걸림"
+        },
+        {
+            img: "https://dayoon07.github.io/static-page-test/img/creativeProjectERD.png",
+            title: "경기 콘텐츠 창의학교 프로젝트 ERD",
+            text: "창의학교 프로젝트 DB ERD"
         }
     ];
     return (
         <>
             <h1 className="text-3xl font-bold mb-6">DB 설계 작업물</h1>
 
-            <div className="lg:flex lg:gap-4">
+            <div className="lg:grid lg:grid-cols-2 lg:gap-4">
                 {l.map((content, idx) => (
-                    <div className="lg:max-w-sm max-lg:w-full max-lg:mb-8">
+                    <div className="lg:max-w-md max-lg:w-full max-lg:mb-8">
                         <a href={content.img} target="_blank">
                             <img src={content.img} className="w-full" />
                         </a>
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">{content.title}</div>
-                            <p className="text-gray-700 text-base">
-                                {content.text}
-                            </p>
+                            <p className="text-gray-700 text-base">{content.text}</p>
                         </div>
                     </div>
                 ))}
