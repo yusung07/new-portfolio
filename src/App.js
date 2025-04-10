@@ -1,37 +1,29 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import SideBar from './components/Side';
 import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import Test from './pages/Test';
+import Profile from './components/Profile';
 
-import Home from './pages/Home';
-import Skill from './pages/Skill';
-import Projects from './pages/Projects';
-import { MobileSideBar } from './components/Side';
-import Architecture from './pages/Architecture';
-import Contact from './pages/Contact';
-
-export default function App() {
+function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <div className="flex min-h-screen">
-        <SideBar />
-        <MobileSideBar />
-
-        <div className="flex flex-col flex-grow h-screen overflow-hidden">
-          <Header />
-
-          <main className="flex-grow overflow-y-auto lg:p-8 max-lg:p-4">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/skill" element={<Skill />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/architecture" element={<Architecture />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
+      <Header />
+      <main className="max-w-screen-xl mx-auto px-4 py-8 flex">
+        <div className='w-60'>
+          <Profile />
         </div>
-      </div>
+        <div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/a" element={<Test />} />
+          </Routes>
+        </div>
+      </main>
+      <Footer />
     </BrowserRouter>
   );
 }
+
+export default App;
