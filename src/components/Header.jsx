@@ -1,17 +1,19 @@
+import { Menu } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, X } from "react-router-dom";
 
 const menuItems = [
   { to: '/', label: 'Homepage' },
-  { to: '/a', label: 'test' }
+  { to: '/skill', label: 'skill' },
+  { to: '/projects', label: 'projects' }
 ];
 
 export default function Header() {
   return (
-    <header className="border-b">
-      <div className="max-w-screen-xl mx-auto p-2 flex">
-        <h1 className="p-2">강다윤</h1>
-        <nav className="ml-44 flex space-x-6">
+    <header className="w-full fixed bg-white border-b">
+      <div className="max-w-screen-lg mx-auto p-4 flex max-lg:justify-between">
+        <Link to="/" className="p-2 font-semibold">Dayoon Kang</Link>
+        <nav className="ml-44 flex space-x-6 max-lg:hidden">
           {menuItems.map((k) => (
             <Link
               key={k.to}
@@ -22,6 +24,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <Link to="/sitemap" className="font-semibold p-2 text-right max-lg:block lg:hidden">사이트맵</Link>
       </div>
     </header>
   );

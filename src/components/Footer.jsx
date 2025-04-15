@@ -1,26 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-6">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <p>&copy; {currentYear} Your Name</p>
-          </div>
-          <div className="flex space-x-4">
-            <a href="https://github.com/yourusername" className="hover:text-white">
-              GitHub
-            </a>
-            <a href="https://twitter.com/yourusername" className="hover:text-white">
-              Twitter
-            </a>
-            <a href="https://linkedin.com/in/yourusername" className="hover:text-white">
-              LinkedIn
-            </a>
-          </div>
+    <footer className="py-4 border-gray-300 border-t bg-gray-100">
+      <div className="max-w-screen-lg mx-auto px-4">
+        <div className="md:mb-0 text-gray-500">
+          <Link to="/sitemap" className="font-semibold hover:text-black hover:underline">사이트맵</Link>
+          <p className="my-2">
+            &copy; {currentYear} dayoon07 All rights reserved. & <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" 
+              className="hover:text-black hover:underline">AcademicPages</a>를 React로 리팩토링
+            </p>
         </div>
       </div>
     </footer>
